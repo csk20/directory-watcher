@@ -40,10 +40,15 @@ you can use this script to copy newly added files to somewhere or anything. it c
 as example lets consider you need to get GAV of newly added pom file
 
 `groupId=$(grep -v '\[' <(mvn help:evaluate -Dexpression="project.groupId"));
+
 artifactId=$(grep -v '\[' <( mvn help:evaluate -Dexpression="project.artifactId"));
+
 version=$(grep -v '\[' <( mvn help:evaluate -Dexpression="project.version"));
+
 echo  "$groupId";
+
 echo "$artifactId";
+
 echo "$version"`
 
 but to do this you need to use `if` statement to figureout which file added
