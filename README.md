@@ -39,17 +39,17 @@ all good. now it will create log for any file change.
 you can use this script to copy newly added files to somewhere or anything. it can catch what happend to the file such as created updated or deleted. or can do any kind of process
 as example lets consider you need to get GAV of newly added pom file
 
-`groupId=$(grep -v '\[' <(mvn help:evaluate -Dexpression="project.groupId"));
+`groupId=$(grep -v '\[' <(mvn help:evaluate -Dexpression="project.groupId"));`
 
-artifactId=$(grep -v '\[' <( mvn help:evaluate -Dexpression="project.artifactId"));
+`artifactId=$(grep -v '\[' <( mvn help:evaluate -Dexpression="project.artifactId"));`
 
-version=$(grep -v '\[' <( mvn help:evaluate -Dexpression="project.version"));
+`version=$(grep -v '\[' <( mvn help:evaluate -Dexpression="project.version"));`
 
-echo  "$groupId";
+`echo  "$groupId";`
 
-echo "$artifactId";
+`echo "$artifactId";`
 
-echo "$version"`
+`echo "$version"`
 
 but to do this you need to use `if` statement to figureout which file added
 
